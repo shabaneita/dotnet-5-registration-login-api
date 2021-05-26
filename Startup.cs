@@ -39,7 +39,7 @@ namespace WebApi
             services.Configure<AppSettings>(_configuration.GetSection("AppSettings"));
 
             // configure DI for application services
-            services.AddScoped<IJwtUtils, JwtUtils>();
+            services.AddScoped<JwtGenerator>();
             services.AddScoped<IUserService, UserService>();
         }
 
